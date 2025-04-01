@@ -33,5 +33,4 @@ This project uses machine learning techniques to predict traffic volume, classif
 ## Future Work
 - Improve **Incident Detection**.
 - Implement **Real-Time Data Integration**.
-# ML-Based-Blr-Traffic-Analysis-
-# ML-Based-Blr-Traffic-Analysis-
+
