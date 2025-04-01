@@ -1,0 +1,46 @@
+
+# Traffic Analysis Project Report
+
+## 1. Introduction
+This project applies machine learning techniques to analyze traffic patterns in Bangalore, India. The dataset includes features such as traffic volume, congestion level, road capacity, and environmental impact, which are used to build predictive models.
+
+## 2. Data Preprocessing
+The dataset was preprocessed by:
+- Removing missing values (None found).
+- Encoding categorical features like 'Weather Conditions' and 'Roadwork and Construction Activity'.
+- Extracting time-based features from the 'Date' column (Year, Month, Day, Weekday).
+- Normalizing numerical features for model consistency.
+
+## 3. Exploratory Data Analysis (EDA)
+The dataset was explored through the following steps:
+- **Distribution of Traffic Volume**: Histogram with Kernel Density Estimate (KDE).
+- **Correlation Heatmap**: Correlation matrix to understand relationships between features.
+- **Traffic Volume vs Average Speed**: Scatter plot to visualize how traffic volume relates to average speed.
+- **Traffic Volume vs Congestion Level**: Scatter plot to observe how traffic volume correlates with congestion.
+
+## 4. Model Building
+### Traffic Volume Prediction:
+- A **Random Forest Regressor** model was used to predict traffic volume. The model achieved an **R² score of 0.99999**, indicating excellent performance.
+  
+### Congestion Level Classification:
+- A **Random Forest Classifier** was trained to classify traffic congestion into three categories: Low, Medium, and High. The model achieved **94% accuracy**.
+  
+### Incident Detection:
+- A **Random Forest Classifier** was used to detect traffic incidents. However, the model's performance was suboptimal with **32% accuracy**.
+
+## 5. Traffic Flow Optimization
+- **KMeans clustering** was applied to identify traffic patterns. The dataset was grouped into 3 clusters based on features such as traffic volume and average speed.
+
+## 6. Deployment
+A **Flask API** was developed to serve the models for real-time traffic prediction. The API includes endpoints for:
+1. **Traffic Volume Prediction**
+2. **Congestion Level Prediction**
+
+## 7. Conclusion
+- The project successfully demonstrated traffic prediction and classification models.
+- Further improvements can be made in incident detection through fine-tuning and handling class imbalance.
+- The Flask API provides a mechanism for real-time predictions using trained models.
+
+## 8. Future Work
+- **Improvement in Incident Detection**: Try techniques like oversampling or hyperparameter tuning.
+- **Real-Time Data Integration**: Extend the API to work with live traffic data from sensors or other sources.
